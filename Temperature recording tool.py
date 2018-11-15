@@ -7,7 +7,7 @@ temperatureList=[]
 #Initialises a variable to an empty string, I will use this to create a while loop which will later set it to either True or False
 #depending on whether the user is inputting temperatures in celsius or fahrenheit
 isCelsius=""
-#Beginning of while loop using isCelcius variable
+#Beginning of while loop using iscelsius variable
 while isCelsius=="":
     #User inputs C to select celsius and F to select fahrenheit, whatever letter they input is converted to lowercase to make
     #If statements easier to implement
@@ -65,6 +65,14 @@ if isCelsius:
     celsiusMedian=round(st.median(temperatureList),1)
     #Once I have the median in celsius, I can use the formula to convert it to fahrenheit, rounds it to 1 decimal place
     fahrenheitMedian=round((celsiusMedian*1.8)+32,1)
+    #Calculating the maximum value in celsius, rounds it to 1 decimal place
+    celsiusMax=round(max(temperatureList),1)
+    #Using maximum in celsius to calculate fahrenheit value, rounds it to 1 decimal place
+    fahrenheitMax=round((celsiusMax*1.8)+32,1)
+    #Calculating minimum value in celsius, rounds it to 1 decimal place
+    celsiusMin=round(min(temperatureList),1)
+    #Using minimum value in celsius to calculate fahrenheit value, rounds to 1 decimal place
+    fahrenheitMin=round((celsiusMin*1.8)+32,1)
 else:
     #Using statistics module to calculate mean, rounds it to 1 decimal place
     fahrenheitMean=round(st.mean(temperatureList),1)
@@ -78,12 +86,24 @@ else:
     fahrenheitMedian=round(st.median(temperatureList),1)
     #Once I have the median in fahrenheit, I can use the formula to convert it to celsius, rounds it to 1 decimal place
     celsiusMedian=round((fahrenheitMedian-32)/1.8,1)
+    #Calclating maximum value in fahrenheit, rounds it to 1 decimal place
+    fahrenheitMax=round(max(temperatureList),1)
+    #Using max in fahrenheit to calculate celsius value, rounds to 1 decimal place
+    celsiusMax=round((fahrenheitMax-32)/1.8,1)
+    #Calculating minimum value in fahrenheit, rounds it to 1 decimal place
+    fahrenheitMin=round(min(temperatureList))
+    #Using minimum in fahrenheit to calculate value in celsius, rounds it to 1 decimal place
+    celsiusMin=round((fahrenheitMin-32)/1.8,1)
 #Outputting all values calculated in a table style format
 #Underscores are the top of the table, separating the outputs from the rest of the program
 print("_"*55)
 #Outputs the row of the table regarding the modal values
-print("     | Mode  | {}° Celsius| {}° Fahrenheit |".format(celsiusMode, fahrenheitMode))
+print("     |  Mode  |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMode, fahrenheitMode))
 #Outputs the row of the table regarding median values
-print("     | Median| {}° Celsius| {}° Fahrenheit |".format(celsiusMedian, fahrenheitMedian))
+print("     |  Median|  {}° Celsius| {}° Fahrenheit  |".format(celsiusMedian, fahrenheitMedian))
 #Outputs the row of the table regarding mean values
-print("     | Mean  | {}° Celsius| {}° Fahrenheit |".format(celsiusMean, fahrenheitMean))
+print("     |  Mean  |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMean, fahrenheitMean))
+#Outputs row of the table regarding maximum values
+print("     |  Max   |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMax, fahrenheitMax))
+#Outputs row of the table regarding minimum values
+print("     |  Min   |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMin, fahrenheitMin))
