@@ -4,7 +4,7 @@
 ## <p align=center>Flowchart</p>
 <img align=center src="https://github.com/olaramoni/Temperature-Recording-Tool/blob/master/Flowchart.jpg"></img>
 
-<p align=center>
+<p>
 OUTPUT Introductory message
 SET temperatureList TO []
 SET isCelsius TO ""
