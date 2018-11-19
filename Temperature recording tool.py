@@ -97,7 +97,7 @@ else:
     #Using max in fahrenheit to calculate celsius value, rounds to 1 decimal place
     celsiusMax=round((fahrenheitMax-32)/1.8,1)
     #Calculating minimum value in fahrenheit, rounds it to 1 decimal place
-    fahrenheitMin=round(min(temperatureList))
+    fahrenheitMin=round(min(temperatureList),1)
     #Using minimum in fahrenheit to calculate value in celsius, rounds it to 1 decimal place
     celsiusMin=round((fahrenheitMin-32)/1.8,1)
 #Outputting all values calculated in a table style format
@@ -105,12 +105,12 @@ else:
 print("You have entered {} temperatures".format(len(temperatureList)))
 print("_"*53)
 #Outputs the row of the table regarding the modal values
-print("   |  Mode   |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMode, fahrenheitMode))
+print("   |  Mode   |  {}° Celsius | {}° Fahrenheit |".format(celsiusMode, fahrenheitMode))
 #Outputs the row of the table regarding median values
-print("   |  Median |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMedian, fahrenheitMedian))
+print("   |  Median |  {}° Celsius | {}° Fahrenheit |".format(celsiusMedian, fahrenheitMedian))
 #Outputs the row of the table regarding mean values
-print("   |  Mean   |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMean, fahrenheitMean))
+print("   |  Mean   |  {}° Celsius | {}° Fahrenheit |".format(celsiusMean, fahrenheitMean))
 #Outputs row of the table regarding maximum values
-print("   |  Max    |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMax, fahrenheitMax))
+print("   |  Max    |  {}° Celsius | {}° Fahrenheit |".format(celsiusMax, fahrenheitMax))
 #Outputs row of the table regarding minimum values
-print("   |  Min    |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMin, fahrenheitMin))
+print("   |  Min    |  {}° Celsius | {}° Fahrenheit |".format(celsiusMin, fahrenheitMin))
