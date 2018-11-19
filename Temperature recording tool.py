@@ -99,9 +99,10 @@ else:
     #Calculating minimum value in fahrenheit, rounds it to 1 decimal place
     fahrenheitMin=round(min(temperatureList))
     #Using minimum in fahrenheit to calculate value in celsius, rounds it to 1 decimal place
-    celsiusMin=round((fahrenheitMin-32)/1.8,1)
+    celsiusMin=round((fahre5nheitMin-32)/1.8,1)
 #Outputting all values calculated in a table style format
 #Underscores are the top of the table, separating the outputs from the rest of the program
+print("You have entered {} temperatures".format(len(temperatureList)))
 print("_"*53)
 #Outputs the row of the table regarding the modal values
 print("   |  Mode   |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMode, fahrenheitMode))
