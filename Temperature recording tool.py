@@ -34,6 +34,7 @@ while inputtingValues:
             #Error prompts user to enter more values
             print("Please enter more values (Minimum of 2)")
         #Else occurs when the user has entered a valid number of values and wants to stop inputting
+
         else:
             #inputtingValues is set to false, indicating that the user is no longer inputting values
             #and ending the while loop
@@ -49,6 +50,11 @@ while inputtingValues:
         except ValueError:
             #User is told their input is invalid while loop repeats
             print("Error, not a valid number")
+        #Program must be able to recieve a maximum of 100 temperatures
+        if len(temperatureList)==100:
+                #Prompts user that the maximum number of values has been reached and calculations will be made
+                print("You have entered the maximum number of values")
+                inputtingValues=False
 #Outputting all values inputted by the user
 print(temperatureList)
 #Conversions for if user selected celsius as their unit of measurement
@@ -96,14 +102,14 @@ else:
     celsiusMin=round((fahrenheitMin-32)/1.8,1)
 #Outputting all values calculated in a table style format
 #Underscores are the top of the table, separating the outputs from the rest of the program
-print("_"*55)
+print("_"*53)
 #Outputs the row of the table regarding the modal values
-print("     |  Mode  |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMode, fahrenheitMode))
+print("   |  Mode   |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMode, fahrenheitMode))
 #Outputs the row of the table regarding median values
-print("     |  Median|  {}° Celsius| {}° Fahrenheit  |".format(celsiusMedian, fahrenheitMedian))
+print("   |  Median |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMedian, fahrenheitMedian))
 #Outputs the row of the table regarding mean values
-print("     |  Mean  |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMean, fahrenheitMean))
+print("   |  Mean   |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMean, fahrenheitMean))
 #Outputs row of the table regarding maximum values
-print("     |  Max   |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMax, fahrenheitMax))
+print("   |  Max    |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMax, fahrenheitMax))
 #Outputs row of the table regarding minimum values
-print("     |  Min   |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMin, fahrenheitMin))
+print("   |  Min    |  {}° Celsius| {}° Fahrenheit  |".format(celsiusMin, fahrenheitMin))
