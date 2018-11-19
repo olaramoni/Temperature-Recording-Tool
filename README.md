@@ -3,15 +3,15 @@
 
 ## <p align=center>Flowchart</p>
 <img align=center src="https://github.com/olaramoni/Temperature-Recording-Tool/blob/master/Flowchart.jpg"></img>
+## <p align=center>Pseudocode</p>
 
-<p>
-OUTPUT Introductory message
-SET temperatureList TO []
-SET isCelsius TO ""
-WHILE isCelsius EQUALS "" DO
-    SET measurementUnit to INPUT
-        IF measurementUnit EQUALS "C":
-            SET isCelsius TO True
+<p>OUTPUT Introductory message</p>
+<p>SET temperatureList TO []</p>
+<p>SET isCelsius TO ""</p>
+<p>WHILE isCelsius EQUALS "" DO</p>
+<p>    SET measurementUnit to INPUT</p>
+<p>        IF measurementUnit EQUALS "C":</p>
+<p>            SET isCelsius TO True</p>
         IF measurementUnit EQUALS "F":
             SET isCelsius to False
 SET inputtingValues TO Temperature
