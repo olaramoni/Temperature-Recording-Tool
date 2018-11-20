@@ -12,8 +12,8 @@
 <p>    SET measurementUnit to INPUT</p>
 <p>        IF measurementUnit EQUALS "C":</p>
 <p>            SET isCelsius TO True</p>
-        IF measurementUnit EQUALS "F":
-            SET isCelsius to False
+<p>        IF measurementUnit EQUALS "F":</p>
+<p>            SET isCelsius to False</p>
 SET inputtingValues TO Temperature
 WHILE inputtingValues EQUALS True DO:
     SET temperature TO input
