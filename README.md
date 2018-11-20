@@ -9,7 +9,7 @@
 <p>SET temperatureList TO []</p>
 <p>SET isCelsius TO ""</p>
 <p>WHILE isCelsius EQUALS "" DO</p>
-<p>    SET measurementUnit to INPUT</p>
+<p>&nbsp&nbsp&nbsp&nbspSET measurementUnit to INPUT</p>
 <p>        IF measurementUnit EQUALS "C":</p>
 <p>            SET isCelsius TO True</p>
 <p>        IF measurementUnit EQUALS "F":</p>
